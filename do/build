@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. .pyenv/bin/activate
+
+rm -rf build
+mkdir build
+cd build
+cmake -G Ninja ..
+
+ninja
+ctest -V
